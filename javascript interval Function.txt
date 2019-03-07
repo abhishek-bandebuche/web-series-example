@@ -1,0 +1,12 @@
+
+
+setTimeout (f1 , 1000);
+it will exwcute after excution of of program after 1sec ;
+
+setInterval (f1, 1000) ;
+it will execute after every 1sec;
+
+y = setInterval( f1, 1000);
+
+clearInterval (y);
+it will clear the interval process;

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	
+<script type="text/javascript" >
+	
+	function myFunct() {
+	/*	var d2 = document.createElement("div");
+		var txtNode1 = document.createTextNode("C");
+		/*
+
+		var something = document.getElementById("something");
+		var button = document.createElement("button");
+		d2
+
+		var button = document.createElement("button");
+		button.setAttribute("type" , "button");
+		d2.appendChild(button);
+		document.body.appendChild(d2);
+	}
+		function doSomething() {
+    		alert("hi");
+}*/
+var btn = document.createElement("BUTTON");
+    var t = document.createTextNode("CLICK ME");
+
+    btn.setAttribute("style","color:red;font-size:14px");
+
+    btn.appendChild(t);
+    document.body.appendChild(btn);
+//	btn.addEventListener("click", doSomething, false);
+    btn.setAttribute("onclick", alert("clicked"));
+    }
+		
+</script>
+<title>Dom Program</title>
+</head>
+<body style="text-align: center;">
+	<input type="button" value="click" onclick="myFunct()" >
+</body>
+</html>

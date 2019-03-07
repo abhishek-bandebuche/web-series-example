@@ -1,0 +1,15 @@
+class Company {
+	var employeeName;
+	var YrExpr;
+ 	
+	Company(emp , exp){
+		this.employeeName = emp ;
+		this.YrExpr = exp ;
+	}
+
+	function Salary (emp , exp)
+	{
+		Salary = 10000 * exp ;
+		console.log ("salary of "+emp +" is "+Salary );
+	}
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<script src="jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+ <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+	<head>
+		<style type="text/css">
+		.lbel {
+			color: white;
+		}
+		</style>
+
+	
+		<script type="text/javascript" >
+			function myFun(){
+
+				var div = document.createElement("div");
+				
+				div.id = "dv";
+				div.style.width = "100px";
+				div.style.height = "100px";
+				div.style.background = "red";
+				div.style.color = "white";
+				div.innerHTML = "Hello";
+
+				document.body.appendChild(div);
+		}
+		function clr(){
+			//   style="height: 500px; width: 800px
+			dv.style.width = "300px" ;
+			dv.style.height = "300px" ;
+	
+			
+		}
+		</script>
+
+		<title>Full Name assignment</title>
+	</head>
+
+	<body style="text-align: center;">
+
+			<button type="button" onclick="myFun()" class="btn btn-primary">Change Color</button>
+			<button type="button" onclick="clr()" class="btn btn-primary">Change Size</button>
+			<br><br>
+			
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<script src="jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+ <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+	<head>
+		<style type="text/css">
+		.lbel {
+			color: white;
+		}
+		</style>
+
+		<script type="text/javascript" >
+			function myFun() {
+				
+			var nme = document.getElementById("nme");
+				nme.style.backgroundColor = $("#lst").val();
+				nme.style.color = $("#clr").val();
+				
+			}
+			function clr() {
+				
+				$("#nme").val("");
+				$("#lst").val("");
+				$("#flnm").val("");
+			}
+		</script>
+
+		<title>Full Name assignment</title>
+	</head>
+
+	<body style="text-align: center;">
+
+		<h1>Welcome to JavaScript</h1>
+
+		<br> <br>
+		<div style="border-style: groove;background-color: gray">
+			<br> <br>
+			<label class="lbel">Enter the Name </label> <input type="text" id="nme" value=""> <br><br>
+
+			<label class="lbel">Enter bg color Name </label> <input type="text" id="lst" value="" > <br><br>
+
+			<label class="lbel">Enter text color Name </label> <input type="text" id="clr" value=""> <br><br>
+
+			<button type="button" onclick="myFun()" class="btn btn-primary">Change Color</button>
+			<button type="button" onclick="clr()" class="btn btn-primary">Clear</button>
+			<br><br>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	
+<script type="text/javascript" >
+
+	window.onload = function() {
+			$("#frst").val("");
+		}
+	function addArray(){
+		var str  = $("#frst").val();
+		if (true) {}
+	
+		var output = "";
+		for (var i = 0, len = str.length; i < len; i++) {
+		    var character = str[i];
+		    if (character == character.toLowerCase()) {
+		      // The character is lowercase
+		      alert("inside if");
+		      output = output + character.toUpperCase();
+		    } else {
+		      // The character is uppercase
+		      output = output + character.toLowerCase();
+		    }
+		  }
+		 $("#sec").val(output);
+				
+	}
+
+	</script>
+<title>Full Name assignment</title>
+</head>
+<body style="text-align: center;">
+	<label class="lbel">Enter String</label> <input type="text" id="frst" value=""> <br><br>
+	<button type="button" onclick="addArray()">Reverse string</button><br>
+	<label class="lbel">reverse</label> <input type="text" id="sec" value=""> <br><br>
+	<div style="height: 500px; width: 800px" id="lst"></div>
+</body>
+</html>

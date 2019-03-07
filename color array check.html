@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	
+<script type="text/javascript" >
+
+	window.onload = function() {
+			$("#frst").val("");
+		}
+		var color =["red", "blue", "green", "cyan"];
+		function myFun(){
+			var v = $("#frst").val();
+			for(var i =0 ; i<color.length -1; i++){
+//			alert(color[i]);
+				if (v == color[i]) {
+					alert("Color Present in Array ");
+					break;
+				}else {
+						color.push($("#frst").val());
+						alert($("#frst").val() +" color added in array")
+						break;
+				}
+			}	
+		}
+
+		function shwArray(){
+		
+			alert("Array list is : "+color);
+		}
+
+		
+	</script>
+<title>Full Name assignment</title>
+</head>
+<body style="text-align: center;">
+	<label class="lbel">Add Color Name</label> <input type="text" id="frst" value=""> <br><br>
+
+	<button type="button" onclick="myFun()">Add Array</button>
+	<button type="button" onclick="shwArray()">Show Array</button>
+	<button type="button" onclick="addArray()">Add Array List</button>
+
+</body>
+</html>

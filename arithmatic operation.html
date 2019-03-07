@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<script src="jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+ <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	<style type="text/css">
+		.lbel {
+			color: white;
+		}
+	</style>
+	
+	<script type="text/javascript" >
+
+		window.onload = function() {
+			clr();
+		};
+		function myFun() {
+//			alert("inside add");
+			
+			var a = parseInt($("#frst").val());
+			var b =parseInt($("#sec").val());
+		
+			var c =  $("#drdw option:selected").val();
+//			alert(c);
+				if ("Add" == ($("#drdw option:selected").val()) ) {
+					alert("inside add");	
+					var x = a+b ;
+//					alert (x);
+					$("#add").val(x);
+				}else 
+				if ("Sub" == ($("#drdw option:selected").val()) ) {
+					var x = a-b ;
+					$("#add").val(x);
+				}else 
+				if ("mul" == ($("#drdw option:selected").val()) ) {
+					var x = a*b ;
+					$("#add").val(x);
+				}else 
+				if ("div" == ($("#drdw option:selected").val()) ) {
+					var x = a/b ;
+					$("#add").val(x);
+				}
+		};
+		function clr() {
+			
+			$("#frst").val("");
+			$("#sec").val("");
+			$("#add").val("");
+		}
+	</script>
+<title>Full Name assignment</title>
+</head>
+<body style="text-align: center;">
+
+<h1>Welcome to JavaScript</h1>
+
+<br> <br>
+<div style="border-style: groove;background-color: gray">
+	<br> <br>
+	<label class="lbel">Enter the First Number </label> <input type="text" id="frst" value=""> <br><br>
+
+	<label class="lbel">Enter the Last Number </label> <input type="text" id="sec" value=""> <br><br>
+	<label class="lbel">Operation on Number </label>
+	<select id="drdw" >
+	  <option value=""></option>
+	  <option value="Add">Addition</option>
+	  <option value="Sub">Sub</option>
+	  <option value="mul">Multiplication</option>
+	  <option value="div">Div</option>
+	</select> 
+	<br><br>
+	<label class="lbel">Number </label> <input type="text" id="add" value=""> <br><br>
+	<button type="button" onclick="myFun()" class="btn btn-primary">Add Number</button>
+	<button type="button" onclick="clr()" class="btn btn-primary">Clear</button>
+	<br><br>
+</div>
+
+
+</body>
+</html>

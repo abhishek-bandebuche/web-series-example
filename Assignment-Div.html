@@ -1,0 +1,49 @@
+<html>
+<head>
+	<style>
+    .A
+    {
+    	background-color:red;
+    	height:200px;
+    	width:200px;
+    }
+    .V
+    {
+    	background-color:yellow;
+    	height:500px;
+    	width:700px;
+    }
+</style>
+</head>
+<body>
+		<input type="button" value="Add Div" onclick="fun1()">
+	<input type="button" value="Change Div" onclick="fun2()">
+
+	<script>
+		function fun1()
+		{
+			var ele=document.createElement("div");
+			var textNode=document.createTextNode("this is div");
+			ele.appendChild(textNode);
+			ele.setAttribute("class","A");
+			ele.setAttribute("id","d1")
+			document.body.appendChild(ele);
+			
+		}
+		function fun2()
+		{
+			/*document.body.removeChild();
+			var el=document.createElement("div");
+			var textNode=document.createTextNode("This Is New DIV");
+			el.appendChild(textNode);
+			el.setAttribute("class","V");
+			document.body.appendChild(el);*/
+
+			d1.style.height="400px";
+			d1.style.width="400px";
+			d1.style.backgroundColor="yellow";
+
+		}
+	</script>
+</body>
+</html>

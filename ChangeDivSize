@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<script src="jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+ <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+	<head>
+		<style type="text/css">
+		.lbel {
+			color: white;
+		}
+		</style>
+
+		<script type="text/javascript" >
+			var div = document.createElement("div");
+			div.style.width = "100px";
+			div.style.height = "100px";
+			div.style.background = "red";
+			div.style.color = "white";
+			div.innerHTML = "Hello";
+
+document.getElementById("main").appendChild(div);
+		</script>
+
+		<title>Full Name assignment</title>
+	</head>
+
+	<body style="text-align: center;">
+
+		<h1>Welcome to JavaScript</h1>
+
+		<br> <br>
+		<div style="border-style: groove;background-color: gray">
+			<button type="button" onclick="myFun()" class="btn btn-primary">Change Color</button>
+			<button type="button" onclick="clr()" class="btn btn-primary">Clear</button>
+			<br><br>
+			<div type="hidden">hi</div>
+		</div>
+
+	</body>
+</html>

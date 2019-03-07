@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	
+<script type="text/javascript" >
+	
+	function myFunct() {
+//		var list = document.querySelector("#p4");
+//		list.style.background = "red";
+
+		var list = document.querySelectorAll("div p");
+		for(i=0 ; i<list.length ; i++)
+		{
+			list[i].style.background = "green";
+		}
+}
+		
+</script>
+<title>Dom Program</title>
+</head>
+<body style="text-align: center;">
+		<p id="p1"></p>
+	<div id="d1">
+		<p>this is p3</p>
+		<p id="p4"> this is p4</p>
+		<p>this is p5</p>
+	</div>
+	<input type="button" value="click" onclick="myFunct()" >
+</body>
+</html>

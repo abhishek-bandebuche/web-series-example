@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	
+<script type="text/javascript" >
+
+	//Write a JavaScript function that generates all combinations of a string.
+//	alert("inside");
+	var str1 = prompt("Enter a string to get Possible Combination ","");
+//	alert(str1);
+
+		var array1 = [];
+		for(var x = 0; x < str1.length; x++)
+		{ 
+			for(var y = 0; y<=str1.length; y++)
+				{ 
+					if(str1.substring(x, y)!='')
+						array1.push(str1.substring(x, y));
+				}
+		}
+	
+	alert( Array.from(new Set(array1)).join('\n'));
+	
+	</script>
+<title>Full Name assignment</title>
+</head>
+<body style="text-align: center;">
+
+
+</body>
+</html>

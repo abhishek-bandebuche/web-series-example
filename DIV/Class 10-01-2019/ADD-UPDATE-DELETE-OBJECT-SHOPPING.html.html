@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Items & Qty in List by using objects</title>
+		<script>
+		var d1;
+		function initComp(){
+			d1=document.getElementById("d1");
+		}
+		var list=new Array();
+		function ShoppingList(x,y){
+			this.name=x;
+			this.qty=y;
+		}
+		function addList(){
+			var txtName=document.form1.txtName.value;
+			var txtQty=document.form1.txtQty.value;
+			var obj=new ShoppingList(txtName,txtQty);
+			list.push(obj);
+			display();
+		}
+		function display(){
+			var str="";
+			for(i=0;i<list.length;i++){
+				str+="<li onclick=show(event)>"+list[i].name+"*"+list[i].qty+"</li>";
+			}
+			d1.innerHTML="<ul>"+str+"</ul>";
+		}
+		function show(event){
+			var str=event.currentTarget.innerHTML;
+			strArr=str.split("*");
+			document.form1.txtName.value=strArr[0];
+			document.form1.txtQty.value=strArr[1];
+			//alert(str);
+			//alert("Click");
+		}
+		function updateList(){
+			for(i=0;i<list.length;i++){
+				if(list[i].name==document.form1.txtName.value){
+					list[i].qty=document.form1.txtQty.value;
+				}
+			}
+			display();
+		}
+		function deleteList(){
+			for(i=0;i<list.length;i++){
+				if(list[i].name==document.form1.txtName.value){
+					list.splice(i,1);
+				}
+			}
+			display();
+		}
+	</script>
+</head>
+	<body onload=initComp()>
+	<form name=form1>
+		Enter Name: <input type="text" id="txtName"><br><br>
+		Enter Qty.: <input type="text" id="txtQty"><br><br>
+		<input type="button" value="Add" onclick="addList()">
+		<input type="button" value="Update" onclick="updateList()">
+		<input type="button" value="Delete" onclick="deleteList()">
+	</form>
+		<div id="d1"></div>
+	</body>
+</html>

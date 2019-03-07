@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	
+<script type="text/javascript" >
+
+	window.onload = function() {
+			$("#frst").val("");
+		}
+		var No =[];
+		function myFun(){
+		
+			No.push (Number($("#frst").val()));
+			alert("Added value in Array is : "+Number($("#frst").val()));
+			$("#frst").val("");
+		}
+
+		function shwArray(){
+		
+			alert("Array list is : "+No.toString());
+		}
+
+		function addArray(){
+		var d = Number($("#frst").val());
+		for (var i = 0; i < No.length; i++) {
+			d = d + Number(No[i]);
+		}
+		alert("Addition is : "+d);
+	}
+	</script>
+<title>Full Name assignment</title>
+</head>
+<body style="text-align: center;">
+	<label class="lbel">Enter Number to Add in Array</label> <input type="text" id="frst" value=""> <br><br>
+
+	<button type="button" onclick="myFun()">Add Array</button>
+	<button type="button" onclick="shwArray()">Show Array</button>
+	<button type="button" onclick="addArray()">Add Array List</button>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	
+<script type="text/javascript" >
+
+	window.onload = function() {
+			$("#frst").val("");
+		}
+	function addArray(){
+		var d = Number($("#frst").val());
+		var lst ="";
+		for (var i = 1; i <= 10; i++) {
+			lst += (d * i ) + "<br>";
+		}
+		document.getElementById('lst').innerHTML = ("<br>  "+lst);
+		$("#frst").val("");
+	}
+	</script>
+<title>Full Name assignment</title>
+</head>
+<body style="text-align: center;">
+	<label class="lbel">Enter NUmber to Add in Array</label> <input type="text" id="frst" value=""> <br><br>
+	<button type="button" onclick="addArray()">Add Array List</button>
+	<div style="height: 500px; width: 800px" id="lst"></div>
+</body>
+</html>

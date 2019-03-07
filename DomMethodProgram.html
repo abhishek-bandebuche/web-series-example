@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	
+<script type="text/javascript" >
+	
+	function myFunct() {
+		var d2 = document.createElement("div");
+		var tr = $("<tr>");
+		var p1 = document.createElement("d1");
+		var tr1 = document.createElement("tr");
+		var td1 = document.createElement("td");
+		var td2 = document.createElement("td");
+		var td3 = document.createElement("td");
+		var txtNode1 = document.createTextNode("C");
+		var txtNode2 = document.createTextNode("Web");
+		var txtNode3 = document.createTextNode("30");
+		d2.appendChild(tr1);
+		tr1.appendChild(td1);
+		td1.appendChild("ABhishek");
+
+
+	}
+		
+</script>
+<title>Dom Program</title>
+</head>
+<body style="text-align: center;">
+	<table>
+		<div border = "2px" id="d1">
+			<tr>
+				<td>Name</td>
+				<td>Sub</td>
+				<td>Marks</td>
+			</tr>
+			<tr>
+				<td>A</td>
+				<td>Web</td>
+				<td>30</td>
+			</tr>
+			<tr>
+				<td>B</td>
+				<td>PhP</td>
+				<td>25</td>
+			</tr>
+		</div>
+	</table>	
+	<input type="button" value="click" onclick="myFunct" >
+</body>
+</html>

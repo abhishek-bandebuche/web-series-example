@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	
+<script type="text/javascript" >
+
+	function myFun()
+	{
+		
+		var No = [9,7,"a",3,"a",4,"a",10];
+		var cnt = 0;
+		var repeat = "";
+		for ( var i = 0; i < No.length; i++){
+
+			for (var j = i+1; j< No.length; j++){
+
+				if (No [i] === No [j]){
+
+					repeat = No[i];	
+//					alert(No[i]);
+					cnt++;
+				}
+				
+			}
+    	}
+    	alert(repeat);
+		alert(cnt);
+		
+	}
+	</script>
+<title>Full Name assignment</title>
+</head>
+<body style="text-align: center;">
+	<div id="shw"></div>
+	<button type="button" onclick="myFun()">Get Array</button>
+
+</body>
+</html>

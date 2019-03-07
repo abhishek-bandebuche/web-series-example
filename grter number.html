@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<script src="jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+ <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	<style type="text/css">
+		.lbel {
+			color: white;
+		}
+	</style>
+	
+	<script type="text/javascript" >
+
+		window.onload = function() {
+			clr();
+		};
+		function myFun() {
+			alert( $("#frst").val());
+			var frst = parseInt( $("#frst").val()) ;
+			var sec =  parseInt( $("#sec").val();
+			var third = parseInt($("#sec").val());
+//			alert(flnm);
+		
+
+		};
+		function clr() {
+			
+			$("#frst").val("");
+			$("#sec").val("");
+			$("#thrd").val("");
+		}
+	</script>
+<title>Greater Number</title>
+</head>
+<body style="text-align: center;">
+
+<h1>Welcome to JavaScript</h1>
+
+<br> <br>
+<div style="border-style: groove;background-color: gray">
+	<br> <br>
+	<label class="lbel">Enter the First Number </label> <input type="text" id="frst" value=""> <br><br>
+
+	<label class="lbel">Enter the Second Number </label> <input type="text" id="sec" value=""> <br><br>
+
+	<label class="lbel">Enter the Third Number </label> <input type="text" id="thrd" value=""> <br><br>
+
+	<label class="lbel">Addition of Number </label> <input type="text" id="grtr" value=""> <br><br>
+	<button type="button" onclick="myFun()" class="btn btn-primary">Greater Number</button>
+	<button type="button" onclick="clr()" class="btn btn-primary">Clear</button>
+	<br><br>
+</div>
+
+
+</body>
+</html>

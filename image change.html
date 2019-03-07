@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	
+<script type="text/javascript" >
+	function myFun(){
+//		document.body.style.backgroundImage ="url('background image/1.jpg')"
+		var imgSrc = document.getElementById("img").getAttribute("src");
+	//	alert(imgSrc);
+		var imgNo = imgSrc.substring(imgSrc.lastIndexOf("/")+1, imgSrc.lastIndexOf("/")+2);
+//		alert(imgNo);
+		
+		if (imgNo == 4) {
+//			alert("inside")
+			imgNo = -1;
+		}
+		var path = "background image/"+( Number(imgNo) + 1) +".jpg";
+		document.getElementById("img").setAttribute("src", path);
+//		alert(path);
+
+}
+	</script>
+<title>Image change on Button</title>
+</head>
+<body style="text-align: center;">
+	<img src="background image/0.jpg" id="img" style="height: 500px; width: 800px"><br><br>
+
+	<button type="button" onclick="myFun()">Change Image</button>
+
+</body>
+</html>

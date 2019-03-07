@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	
+<script type="text/javascript" >
+	
+	function myFunct() {
+		var d1 = document.getElementById("d1");
+		var val = document.querySelectorAll("input[tyoe=radio];checked");
+		alert(val);
+		for(i = 0 ; i<val ; i++)
+		{
+			d1.innerHTML += val[i].value;
+		}
+}
+		
+</script>
+<title>Dom Program</title>
+</head>
+<body style="text-align: center;">
+	 <input type="radio" name="gender" id="myRadio" value="male" checked> Male<br>
+  	<input type="radio" name="gender" id="myRadio" value="female"> Female<br>
+	<input type="button" value="click" onclick="myFunct()" >
+</body>
+</html>

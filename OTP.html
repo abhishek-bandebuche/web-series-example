@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+<html>
+<head>
+	
+<script type="text/javascript" >
+	
+	function myFun(){
+		var digits = '0123456789'; 
+    let OTP = ''; 
+    for (let i = 0; i < 4; i++ ) { 
+        OTP += digits[Math.floor(Math.random() * 10)]; 
+    } 
+    return OTP; 
+} 
+  
+document.write("OTP of 4 digits: ") 
+document.write( generateOTP() ); 
+//			document.write(otp);
+//			document.getElementById('otp').innerHTML = otp;
+		
+</script>
+<title>Full Name assignment</title>
+</head>
+<body style="text-align: center;">
+
+<p id ="otp"></p>
+</body>
+</html>
